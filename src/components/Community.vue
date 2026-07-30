@@ -77,7 +77,7 @@ export default {
   data() {
     return {
       stats: [
-        { value: '19', label: 'open source components' },
+        { value: '20', label: 'open source components' },
         { value: '5', label: 'declarative layers' },
         { value: 'Apache', label: '2.0 license' },
         { value: '0', label: 'SaaS dependencies' }

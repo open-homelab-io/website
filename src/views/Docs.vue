@@ -67,7 +67,7 @@ export default {
       steps: [
         {
           title: 'Provision Proxmox VMs',
-          body: 'Configure your Proxmox endpoint and API token, then synthesize and apply the CDKTF stack to create the cluster nodes with predictable static addresses.',
+          body: 'Configure your Proxmox endpoint and API token, then synthesize and apply the CDKTN stack to create the cluster nodes with predictable static addresses.',
           cmd: 'cp .env.example .env\ncd infra/proxmox\nbun install && bun run get\nbun run synth'
         },
         {

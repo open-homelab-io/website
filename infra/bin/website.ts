@@ -19,6 +19,10 @@ const enableCustomDomain = app.node.tryGetContext('enableCustomDomain') === 'tru
 // createOidcProvider=false when the account already has one to import it.
 const createOidcProvider = app.node.tryGetContext('createOidcProvider') !== 'false';
 
+// Optional override for the OIDC subject-claim pattern (needed for GitHub orgs
+// that use immutable subject claims with numeric owner/repo ids).
+const oidcSubjectClaim = app.node.tryGetContext('oidcSubjectClaim') as string | undefined;
+
 new WebsiteStack(app, 'OpenHomeLabWebsite', {
   env: {
     account: process.env.CDK_DEFAULT_ACCOUNT,
@@ -31,5 +35,6 @@ new WebsiteStack(app, 'OpenHomeLabWebsite', {
   githubRepo,
   enableCustomDomain,
   createOidcProvider,
+  oidcSubjectClaim,
   description: 'Static website hosting for Open HomeLab (S3 + CloudFront + GitHub OIDC deploy role).',
 });

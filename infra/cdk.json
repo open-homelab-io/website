@@ -12,6 +12,7 @@
     "githubBranch": "main",
     "enableCustomDomain": "true",
     "createOidcProvider": "false",
+    "oidcSubjectClaim": "repo:open-homelab-io@309124221/website@1316676284:*",
     "@aws-cdk/aws-iam:minimizePolicies": true,
     "@aws-cdk/core:newStyleStackSynthesis": true
   }

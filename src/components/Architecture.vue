@@ -35,7 +35,7 @@ export default {
         {
           n: 1,
           title: 'Proxmox infrastructure',
-          body: 'VM shape, static addresses, and provider settings declared with CDKTF and the bpg/proxmox Terraform provider.'
+          body: 'VM shape, static addresses, and provider settings declared with CDKTN and the bpg/proxmox Terraform provider.'
         },
         {
           n: 2,

@@ -7,7 +7,7 @@ Tailwind CSS and deployed to AWS S3 + CloudFront.
 The site is branded around the open source stack that Open HomeLab actually
 provisions and deploys:
 
-- **Infrastructure** — Proxmox VE (via CDKTF + Terraform), Talos Linux
+- **Infrastructure** — Proxmox VE (via CDKTN + Terraform), Talos Linux
 - **GitOps & registry** — Argo CD, Harbor
 - **Networking** — MetalLB, Traefik, cert-manager, ExternalDNS
 - **Identity & secrets** — Keycloak (OIDC SSO), OpenBao, External Secrets Operator

@@ -31,6 +31,13 @@ export interface WebsiteStackProps extends StackProps {
    */
   readonly createOidcProvider: boolean;
   /**
+   * OIDC subject-claim pattern the deploy role trusts. Defaults to the classic
+   * `repo:<owner>/<repo>:*`. GitHub orgs with immutable subject claims encode
+   * numeric ids (e.g. `repo:owner@<orgId>/repo@<repoId>:*`); pass that here so
+   * the trust condition matches the token GitHub actually issues.
+   */
+  readonly oidcSubjectClaim?: string;
+  /**
    * Whether to attach the custom domain to the distribution and point the apex
    * Route 53 records at it.
    *
@@ -52,6 +59,10 @@ export class WebsiteStack extends Stack {
     super(scope, id, props);
 
     const { domainName, hostedZoneId, githubOwner, githubRepo, enableCustomDomain, createOidcProvider } = props;
+
+    // GitHub orgs with immutable subject claims put numeric ids in the OIDC sub
+    // (repo:owner@<orgId>/repo@<repoId>:*), so allow overriding the classic form.
+    const oidcSubjectClaim = props.oidcSubjectClaim ?? `repo:${githubOwner}/${githubRepo}:*`;
 
     // Import the existing zone. We only add the apex website records below and
     // deliberately leave every other record (MX, subdomains, etc.) untouched.
@@ -151,7 +162,7 @@ export class WebsiteStack extends Stack {
           'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
         },
         StringLike: {
-          'token.actions.githubusercontent.com:sub': `repo:${githubOwner}/${githubRepo}:*`,
+          'token.actions.githubusercontent.com:sub': oidcSubjectClaim,
         },
       }),
     });
