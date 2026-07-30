@@ -1,0 +1,26 @@
+{
+  "name": "open-homelab-infra",
+  "version": "1.0.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "AWS CDK infrastructure for the Open HomeLab static site (S3 + CloudFront + GitHub OIDC deploy role).",
+  "bin": {
+    "infra": "bin/website.ts"
+  },
+  "scripts": {
+    "cdk": "cdk",
+    "synth": "cdk synth",
+    "diff": "cdk diff",
+    "deploy": "cdk deploy"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "aws-cdk": "^2.160.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.0"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "^2.160.0",
+    "constructs": "^10.3.0"
+  }
+}

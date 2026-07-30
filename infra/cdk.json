@@ -1,0 +1,18 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/website.ts",
+  "watch": {
+    "include": ["**"],
+    "exclude": ["README.md", "cdk*.json", "**/*.d.ts", "**/*.js", "node_modules"]
+  },
+  "context": {
+    "domainName": "open-homelab.io",
+    "hostedZoneId": "Z099392515FBTZ36IA5IZ",
+    "githubOwner": "open-homelab-io",
+    "githubRepo": "website",
+    "githubBranch": "main",
+    "enableCustomDomain": "true",
+    "createOidcProvider": "false",
+    "@aws-cdk/aws-iam:minimizePolicies": true,
+    "@aws-cdk/core:newStyleStackSynthesis": true
+  }
+}
