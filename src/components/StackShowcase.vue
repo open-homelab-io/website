@@ -69,7 +69,7 @@
 
       <div class="px-5 py-10 sm:px-8 lg:px-12 xl:px-16">
         <p class="text-sm text-slate-500">
-          Optional AWS integrations (Route 53, S3-backed Terraform state, IAM Roles
+          Optional AWS integrations (Route 53, S3-backed OpenTofu state, IAM Roles
           Anywhere) are opt-in and disabled by default.
         </p>
       </div>
@@ -94,10 +94,10 @@ export default {
           dot: 'bg-sky-300',
           blurb: 'Compute and machine configuration declared as code, from the hypervisor up.',
           tools: [
-            { name: 'Proxmox VE', tag: 'virtualization', icon: '/logos/proxmox.svg', body: 'Bare-metal hypervisor hosting the cluster VMs, provisioned with CDKTN and the bpg/proxmox Terraform provider.', link: 'https://www.proxmox.com/en/proxmox-virtual-environment' },
+            { name: 'Proxmox VE', tag: 'virtualization', icon: '/logos/proxmox.svg', body: 'Bare-metal hypervisor hosting the cluster VMs, provisioned with CDKTN and the bpg/proxmox OpenTofu provider.', link: 'https://www.proxmox.com/en/proxmox-virtual-environment' },
             { name: 'Talos Linux', tag: 'kubernetes os', icon: '/logos/talos.svg', body: 'Immutable, API-driven operating system for the Kubernetes nodes — no SSH, fully declarative machine config.', link: 'https://www.talos.dev' },
-            { name: 'CDKTN', tag: 'iac', icon: '/logos/cdktn.svg', body: 'TypeScript-authored infrastructure as code (CDK for Terraform) that synthesizes and applies the Proxmox and AWS layers.', link: 'https://cdktn.io' },
-            { name: 'Terraform', tag: 'provisioning', icon: '/logos/terraform.svg', body: 'The provisioning engine CDKTN synthesizes to, driving the bpg/proxmox provider that creates the VMs.', link: 'https://www.terraform.io' }
+            { name: 'CDKTN', tag: 'iac', icon: '/logos/cdktn.svg', body: 'TypeScript-authored infrastructure as code (CDK Terrain) that synthesizes and applies the Proxmox and AWS layers via OpenTofu.', link: 'https://cdktn.io' },
+            { name: 'OpenTofu', tag: 'provisioning', icon: '/logos/opentofu.svg', body: 'The provisioning engine CDKTN synthesizes to, driving the bpg/proxmox provider that creates the VMs.', link: 'https://opentofu.org' }
           ]
         },
         {

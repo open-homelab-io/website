@@ -7,13 +7,13 @@ Tailwind CSS and deployed to AWS S3 + CloudFront.
 The site is branded around the open source stack that Open HomeLab actually
 provisions and deploys:
 
-- **Infrastructure** — Proxmox VE (via CDKTN + Terraform), Talos Linux
+- **Infrastructure** — Proxmox VE (via CDKTN + OpenTofu), Talos Linux
 - **GitOps & registry** — Argo CD, Harbor
 - **Networking** — MetalLB, Traefik, cert-manager, ExternalDNS
 - **Identity & secrets** — Keycloak (OIDC SSO), OpenBao, External Secrets Operator
 - **Storage & data** — Longhorn, CloudNativePG
 - **Observability (LGTM)** — Grafana, Loki, Tempo, Mimir, Grafana Alloy
-- **Optional AWS** — Route 53, S3-backed Terraform state, IAM Roles Anywhere
+- **Optional AWS** — Route 53, S3-backed OpenTofu state, IAM Roles Anywhere
 
 The workloads layer (Home Assistant, game servers, InfluxDB, etc.) is wired for
 GitOps but not yet deployed, so the site intentionally lists only what the cluster

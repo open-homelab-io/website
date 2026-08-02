@@ -35,7 +35,7 @@ export default {
         {
           n: 1,
           title: 'Proxmox infrastructure',
-          body: 'VM shape, static addresses, and provider settings declared with CDKTN and the bpg/proxmox Terraform provider.'
+          body: 'VM shape, static addresses, and provider settings declared with CDKTN and the bpg/proxmox OpenTofu provider.'
         },
         {
           n: 2,
@@ -60,7 +60,7 @@ export default {
         {
           n: '＋',
           title: 'Optional AWS',
-          body: 'Opt-in Route 53 DNS-01 and ExternalDNS via IAM Roles Anywhere, plus S3-backed Terraform state. Off by default.'
+          body: 'Opt-in Route 53 DNS-01 and ExternalDNS via IAM Roles Anywhere, plus S3-backed OpenTofu state. Off by default.'
         }
       ]
     }

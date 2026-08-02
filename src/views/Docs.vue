@@ -100,7 +100,7 @@ export default {
         {
           label: 'Runbook',
           title: 'Optional AWS',
-          body: 'Enable Route 53 DNS-01, ExternalDNS, and S3-backed Terraform state through IAM Roles Anywhere — opt-in only.'
+          body: 'Enable Route 53 DNS-01, ExternalDNS, and S3-backed OpenTofu state through IAM Roles Anywhere — opt-in only.'
         }
       ]
     }

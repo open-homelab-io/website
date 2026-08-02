@@ -74,7 +74,7 @@ export default {
         { type: 'cmd', text: 'git clone https://github.com/open-homelab-io/open-homelab' },
         { type: 'cmd', text: 'cd open-homelab && cp .env.example .env' },
         { type: 'blank', text: '' },
-        { type: 'comment', text: '# 1 · provision proxmox vms (cdktn + terraform)' },
+        { type: 'comment', text: '# 1 · provision proxmox vms (cdktn + opentofu)' },
         { type: 'cmd', text: 'cd infra/proxmox && bun install && bun run synth' },
         { type: 'blank', text: '' },
         { type: 'comment', text: '# 2 · bring up talos linux + kubernetes' },
