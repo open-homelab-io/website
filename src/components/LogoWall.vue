@@ -42,7 +42,7 @@ export default {
         { name: 'Proxmox', src: '/logos/proxmox.svg' },
         { name: 'Talos', src: '/logos/talos.svg' },
         { name: 'CDKTN', src: '/logos/cdktn.svg' },
-        { name: 'Terraform', src: '/logos/terraform.svg' },
+        { name: 'OpenTofu', src: '/logos/opentofu.svg' },
         { name: 'Argo CD', src: '/logos/argocd.svg' },
         { name: 'Harbor', src: '/logos/harbor.svg' },
         { name: 'MetalLB', src: '/logos/metallb.svg' },
